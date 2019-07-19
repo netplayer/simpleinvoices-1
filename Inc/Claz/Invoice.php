@@ -82,11 +82,11 @@ class Invoice
                     foreach ($having as $key => $value) {
                         if (is_int($key) && is_array($value)) {
                             $values = $value;
-                            foreach ($values as $key => $value) {
+                            foreach ($values as $key2 => $value2) {
                                 if (empty($value)) {
-                                    $pdoDb->setHavings(Invoice::buildHavings($key));
+                                    $pdoDb->setHavings(Invoice::buildHavings($key2));
                                 } else {
-                                    $pdoDb->setHavings(Invoice::buildHavings($key, $value));
+                                    $pdoDb->setHavings(Invoice::buildHavings($key2, $value2));
                                 }
                             }
                         } else {
