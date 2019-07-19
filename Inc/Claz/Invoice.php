@@ -89,11 +89,12 @@ class Invoice
                                     $pdoDb->setHavings(Invoice::buildHavings($key, $value));
                                 }
                             }
-                        }
-                        if (empty($value)) {
-                            $pdoDb->setHavings(Invoice::buildHavings($key));
                         } else {
-                            $pdoDb->setHavings(Invoice::buildHavings($key, $value));
+                            if (empty($value)) {
+                                $pdoDb->setHavings(Invoice::buildHavings($key));
+                            } else {
+                                $pdoDb->setHavings(Invoice::buildHavings($key, $value));
+                            }
                         }
                     }
                 } else if (is_string($having)) {
