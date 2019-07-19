@@ -13,6 +13,12 @@
   </div>
   <div id="left">
     <ul>
+        <li>2019-07-18 - <b>2019.2.0</b>
+            <ul>
+                <li>Fix issue of Invoice of getAllHavings selection logic.</li>
+                <li>Fix date range logic in Sales Report By Period.</li>
+            </ul>
+        </li>
         <li>2019-04-24 - <b>2019.2.0</b>
             <ul>
                 <li>Converted all DB tables to InnoDB using utf8 charset and uft8_unicode_ci collation.</li>
